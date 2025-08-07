@@ -86,50 +86,21 @@ img {
     }
 }
 </style><style>
-.top-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    z-index: 1000;
-    font-weight: bold;
+.image-text-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
 }
-
-.hamburger {
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    z-index: 1001;
-}
-
 @media (max-width: 768px) {
-    .nav-items {
-        display: none;
+    .image-text-wrapper {
         flex-direction: column;
-        background-color: #007BFF;
-        position: fixed;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        z-index: 999;
+        align-items: center;
     }
-
-    .nav-items.show {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
+    .image-text-wrapper img {
+        max-width: 100%;
+        height: auto;
     }
 }
 </style></head>
@@ -201,13 +172,13 @@ function toggleMenu() {
 <section>
 <h2>About</h2>
 <div style="display: flex; align-items: center; gap: 20px;"> <!-- <img alt="Profile Photo" src="https://media.licdn.com/dms/image/v2/C5603AQE7BQA-BF7krw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516575947153?e=1758153600&amp;v=beta&amp;t=VIhj1WzLDHJhUgKJ2rSJ5fHHz-T3oDpMy_22hK_074Y" style="width: 220px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/> --->
-<img alt="Profile Photo" src="Mastronardi_foto.jpg" style="width: 220px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-<p> Senior engineering manager with over 11 years of experience gained in automotive, agriculture and railway multinational companies. 
+<div class="image-text-wrapper"><img alt="Profile Photo" src="Mastronardi_foto.jpg" style="width: 220px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/><p> Senior engineering manager with over 11 years of experience gained in automotive, agriculture and railway multinational companies. 
             Proven results in product development. Ability to work in complex global organizations managing cross-functional team. 
             Propensity for interpersonal relationships, proactivity, communication and organizational skills. 
             High aptitude for negotiation and discussion, strong problem-solving skills. 
             Remarkable ambition and orientation to achieving goals.
-        </p>
+        </p></div>
+
 </div>
 </section>
 <section><h2>Professional Skills</h2><p>
@@ -277,12 +248,7 @@ function toggleMenu() {
 <p><i class="fas fa-graduation-cap"></i> Master's degree in Automation Engineering</p>
 </section>
 <footer>
-<p>© Powered by M@strosoft</p>
+<p>Ã‚Â© Powered by M@strosoft</p>
 </footer>
-</section><script>
-function toggleMenu() {
-    var nav = document.querySelector('.nav-items');
-    nav.classList.toggle('show');
-}
-</script></body>
+</section></body>
 </html>
