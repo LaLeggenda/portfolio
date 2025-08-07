@@ -1,0 +1,99 @@
+
+/* === General Styles === */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* === Navbar Section === */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* === Hamburger Icon === */
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+/* === Navigation Items === */
+.nav-items {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        background-color: #007BFF;
+        position: fixed;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .nav-items.show {
+        display: flex;
+    }
+}
+
+/* === Profile Section === */
+/* Styles for profile description and summary */
+.profile-section {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* === Skills Section === */
+/* Styles for listing skills and competencies */
+.skills-section {
+    padding: 20px;
+}
+
+/* === Professional Challenges Section === */
+/* Styles for experience and project descriptions */
+.challenges-section {
+    padding: 20px;
+}
+
+/* === Education Section === */
+/* Styles for academic background */
+.education-section {
+    padding: 20px;
+}
