@@ -85,6 +85,53 @@ img {
         font-size: 14px;
     }
 }
+</style><style>
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        background-color: #007BFF;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        z-index: 999;
+    }
+
+    .nav-items.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
 </style></head>
 <body>
 <style>
@@ -230,7 +277,12 @@ function toggleMenu() {
 <p><i class="fas fa-graduation-cap"></i> Master's degree in Automation Engineering</p>
 </section>
 <footer>
-<p>Ã‚Â© Powered by M@strosoft</p>
+<p>©Powered by M@strosoft</p>
 </footer>
-</section></body>
+</section><script>
+function toggleMenu() {
+    var nav = document.querySelector('.nav-items');
+    nav.classList.toggle('show');
+}
+</script></body>
 </html>
