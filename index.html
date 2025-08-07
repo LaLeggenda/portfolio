@@ -87,12 +87,17 @@ img {
 <body>
 <style>
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1e1e2f;
   padding: 20px 40px;
-  color: white;         
+  color: white;  
+  box-sizing: border-box;z-index: 1000;       
 }
 .navbar-items {
   display: flex;
