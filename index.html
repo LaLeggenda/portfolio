@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <title>Alessandro Mastronardi - Portfolio</title>
@@ -83,46 +83,66 @@ img {
         font-size: 14px;
     }
 }
-</style><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>
-body {
-    margin: 0;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-        font-size: 16px;
-    }
-    h1, h2, h3 {
-        font-size: 1.2em;
-    }
-    .container {
-        flex-direction: column;
-    }
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
 </style></head>
 <body>
-<header>
-<div><strong>Alessandro Mastronardi - Program manager</strong></div>
-<nav>
+<style>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e2f;
+  padding: 20px 40px;
+  color: white;         
+}
+.navbar-items {
+  display: flex;
+  gap: 15px;
+}
+.navbar-items a {
+  color: white;
+  text-decoration: none;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    background-color: #1e1e2f;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px;
+  }
+  .navbar-items.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+</style>
+<section>
+<!--<header>--->
+<div class="navbar">
+<div class="navbar-title"><strong>Alessandro Mastronardi - Program manager</strong></div>
+<div class="hamburger" onclick="toggleMenu()">â˜°</div>
+<div class="navbar-items" id="navbarItems">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="get_in_touch.html">Get in Touch</a>
-</nav>
-</header>
+</div>
+</div>
+<script>
+function toggleMenu() {
+  var items = document.getElementById("navbarItems");
+  items.classList.toggle("show");
+}
+</script>
+<!--</header>--->
 <section>
 <h2>About</h2>
 <div style="display: flex; align-items: center; gap: 20px;"> <!-- <img alt="Profile Photo" src="https://media.licdn.com/dms/image/v2/C5603AQE7BQA-BF7krw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516575947153?e=1758153600&amp;v=beta&amp;t=VIhj1WzLDHJhUgKJ2rSJ5fHHz-T3oDpMy_22hK_074Y" style="width: 220px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/> --->
@@ -202,7 +222,7 @@ img {
 <p><i class="fas fa-graduation-cap"></i> Master's degree in Automation Engineering</p>
 </section>
 <footer>
-<p>©Powered by M@strosoft</p>
+<p>Ã‚Â© Powered by M@strosoft</p>
 </footer>
-</body>
+</section></body>
 </html>
