@@ -7,6 +7,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Get in Touch - Alessandro Mastronardi</title>
+
 <style>
         body {
             font-family: 'Segoe UI', sans-serif;
@@ -42,13 +43,90 @@
     </style>
 </head>
 <body>
-<header>
-<div><strong>Alessandro Mastronardi</strong></div>
-<nav>
-<a href="index.html">Home</a>
-<a href="get_in_touch.html">Get in Touch</a>
-</nav>
-</header>
+<style>
+   .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e2f;
+  padding: 20px 40px;
+  color: white;  
+  box-sizing: border-box;z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);       
+}
+.navbar-items {
+  display: flex;
+  gap: 15px;
+}
+.navbar-items a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white
+}
+@media (max-width: 768px) {
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    background-color: #1e1e2f;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px;
+  }
+  .navbar-items.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+  </style>
+  <section>
+   <div class="navbar">
+    <div class="navbar-title">
+     <strong>
+      Alessandro Mastronardi - Program Manager
+     </strong>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+     â˜°
+    </div>
+    <div class="navbar-items" id="navbarItems">
+     <a href="index.html">
+      <strong>
+       Home
+      </strong>
+     </a>
+     <a href="services.html">
+      <strong>
+       Services
+      </strong>
+     </a>
+     <a href="get_in_touch.html">
+      <strong>
+       Get in Touch
+      </strong>
+     </a>
+    </div>
+   </div>
+   <script>
+    function toggleMenu() {
+  var items = document.getElementById("navbarItems");
+  items.classList.toggle("show");
+}
+   </script>
+   <section>
+
 <div class="container">
 <h1>Get in Touch</h1>
 <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ale.mas@blu.it">ale.mas@blu.it</a></p>
