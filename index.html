@@ -116,6 +116,25 @@ p {
   cursor: pointer;
   color: white
 }
+
+.image-text-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.profile-photo {
+    width: 250px;
+    min-width: 250px;
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
 @media (max-width: 768px) {
   .navbar-items {
     display: none;
@@ -132,6 +151,11 @@ p {
   .hamburger {
     display: block;
   }
+  .profile-photo {
+        width: 220px;
+        min-width: 220px;
+        height: 280px;
+    }
 }
    </style>
   <section>
@@ -170,21 +194,36 @@ p {
    </script>
 
 
-<section><h2>About</h2>
-<div>
-     <!-- <img alt="Profile Photo" src="https://media.licdn.com/dms/image/v2/C5603AQE7BQA-BF7krw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516575947153?e=1758153600&amp;v=beta&amp;t=VIhj1WzLDHJhUgKJ2rSJ5fHHz-T3oDpMy_22hK_074Y" style="width: 220px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/> --->
-     <div class="image-text-wrapper">
-      <img alt="Profile Photo" src="Mastronardi_foto.jpg"/>
-      <p>
-       Senior engineering manager with over 11 years of experience gained in automotive, agriculture and railway multinational companies. 
-            Proven results in product development. Ability to work in complex global organizations managing cross-functional team. 
-            Propensity for interpersonal relationships, proactivity, communication and organizational skills. 
-            High aptitude for negotiation and discussion, strong problem-solving skills. 
-            Remarkable ambition and orientation to achieving goals.
-</p>
-</div>
-</div>
+
+<section>
+    <h2>About</h2>
+
+    <div class="image-text-wrapper">
+
+        <img
+            src="Mastro_fotoexecutive.png"
+           gineering manager with over 11 years of experience gained
+            in automotive, agriculture and railway multinational companies.
+            Proven results in product development and delivery of complex
+            engineering programs.
+
+            Strong capability to work in global organizations and to coordinate
+            cross-functional and multicultural teams in dynamic environments.
+
+            Experienced in project and product management, requirements
+            engineering, system integration and stakeholder management.
+
+            Recognized for excellent interpersonal skills, proactive attitude,
+            communication effectiveness, negotiation capabilities and strong
+            problem-solving approach.
+
+            Highly goal-oriented with a continuous focus on innovation,
+            business value creation and organizational growth.
+        </p>
+
+    </div>
 </section>
+
    
 
 <section><h2>Professional Skills</h2>
