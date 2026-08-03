@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alessandro Mastronardi - Portfolio</title>
-
     <style>
         * {
             box-sizing: border-box;
@@ -106,14 +105,15 @@
         }
 
         .profile-photo {
-            width: 160px;
-            height: 200px;
+            width: 320px;
+            height: 400px;
+            max-width: 100%;
             object-fit: cover;
             object-position: center top;
-            border-radius: 16px;
+            border-radius: 18px;
             display: block;
             margin: 0 auto 25px auto;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.24);
             border: 3px solid #ffffff;
         }
 
@@ -191,8 +191,8 @@
             }
 
             .profile-photo {
-                width: 140px;
-                height: 175px;
+                width: 280px;
+                height: 350px;
             }
 
             .about-text p {
@@ -201,16 +201,12 @@
         }
     </style>
 </head>
-
 <body>
-
     <div class="navbar">
         <div class="navbar-title">
             <strong>Alessandro Mastronardi - Program Manager</strong>
         </div>
-
         <div class="hamburger" onclick="toggleMenu()">☰</div>
-
         <div class="navbar-items" id="navbarItems">
             <a href="index.html"><strong>Home</strong></a>
             <a href="services.html"><strong>Services</strong></a>
@@ -220,9 +216,7 @@
 
     <section class="about-section">
         <img src="Mastro_fotoexecutive.png" alt="Alessandro Mastronardi" class="profile-photo" />
-
         <h2>About</h2>
-
         <div class="about-text">
             <p>
                 Engineering manager with over 11 years of experience gained in
@@ -230,23 +224,19 @@
                 Proven results in product development and delivery of complex
                 engineering programs.
             </p>
-
             <p>
                 Strong capability to work in global organizations and to coordinate
                 cross-functional and multicultural teams in dynamic environments.
             </p>
-
             <p>
                 Experienced in project and product management, requirements
                 engineering, system integration and stakeholder management.
             </p>
-
             <p>
                 Recognized for excellent interpersonal skills, proactive attitude,
                 communication effectiveness, negotiation capabilities and strong
                 problem-solving approach.
             </p>
-
             <p>
                 Highly goal-oriented with a continuous focus on innovation,
                 business value creation and organizational growth.
@@ -284,7 +274,6 @@
 
     <section>
         <h2>Professional Challenges</h2>
-
         <div class="card-content">
             <h1>Alstom Ferroviaria Spa - <i>NTL Project</i></h1>
             <p><strong>Goal:</strong> Implement the ICONIS Train Management System control center solution, Sweden national roll-out</p>
@@ -337,6 +326,5 @@
             items.classList.toggle("show");
         }
     </script>
-
 </body>
 </html>
